@@ -1,0 +1,18 @@
+#Python countdown timer
+import time # import time module to make use of sleep method to mimic a timer
+
+my_time = int(input("Enter time in seconds:")) # collecting user input for setting the timer
+
+for x in range( my_time,0,-1): #setting up a for loop to iterate over seconds. Using the step(-1) in range function to reverse the counting
+    
+    seconds = x % 60 # we use % because it helps in keeping the number of seconds in range of 0 to 50 
+    #eg. if x == 3; 3 % 60 == 2; However, if x = 300; 300 % 60 == 0, which is right as it would be equal to 5 minutes
+    minutes = int(x / 60) % 60 #We first calculate num of minutes by x/60, typeasting it as int would avoid printing decimal answers ( as in 3 / 60) 
+    # We then ensure that the minutes are in range through % 60
+    hours = int(x / 3600) # We get hours to be equal to x / 3600 . However, if users decided to enter seconds less than 3600, them
+    #we might get decimal answers. So, int typecasting would round off the answer to the nearest integer ( which would be zero if x <3600)
+    
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")# finally, we print the result for each iteration, the format specifiers :02 - here 2 indicates the number od digits that can occur while 0 is used for padding(preceeding before the digits)
+    time.sleep(1)# the timer sleeps for 1 second after each iteration just like the real world
+
+print("Time's up!" ) #After the loop execution is complete, a final message is printed
