@@ -1,0 +1,21 @@
+Basic Topics that act as the building blocks of Python
+
+
+-> Collections  - single "varaible" used to store multiple values ; each value in a collection is called an element
+  -There's four general purpose collections in Python - lists, sets, tuples, and dictionaries
+ 
+-List = []ordered and changeable, Duplicates OK
+  fruits[0] ; fruits[::-1]
+  print(dir(fruis)) ; print(help(fruits()) ; print(len(fruits)) ; print("apple" in fruits)
+  fruits[0] = "pineapple" ; fruits.append("lemon") ; fruits.remove("lemon") ; fruits.pop()
+  fruits.insert(0,"apple") ; fruits.sort() ; fruits.reverse() ; fruits.clear() ; fruits.index("apple")
+  fruits.count("apple")
+
+  -Set = {} unordered and immutable,but add/remove OK.NO duplicates
+  print(len(fruits)) ; fruits.add("apple") ; fruits.remove("apple") ; fruits.pop()
+  fruits.clear()
+  #work well if you are working with constants
+  
+  -Tuples = ()ordered and uncahngeable.Duplicates OK. Faster
+  they are faster than lists 
+  fruits.index("aaple") ; fruits.count("coconut")
